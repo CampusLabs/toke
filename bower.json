@@ -1,0 +1,15 @@
+{
+  "name": "toke",
+  "version": "0.0.1",
+  "main": "toke.js",
+  "ignore": ["test", "index.html"],
+  "dependencies": {
+    "jquery": "x",
+    "underscore": "x",
+    "rec": "x"
+  },
+  "devDependencies": {
+    "mocha": "x",
+    "chai": "x"
+  }
+}
