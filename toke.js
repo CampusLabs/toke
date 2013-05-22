@@ -46,11 +46,11 @@
             template: this.tokenTemplate,
             collection: selected
           })).render().$el.appendTo(this.$('.js-toke-container'));
-          this.rec.render();
+          _.defer(_.bind(this.rec.render, this.rec));
         },
         remove: function (token) {
           delete this.views[token.id];
-          this.rec.render();
+          _.defer(_.bind(this.rec.render, this.rec));
         }
       });
       this.selected.add(options.selected);
