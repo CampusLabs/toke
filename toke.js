@@ -2,7 +2,6 @@
   'use strict';
 
   // Store a local reference to jQuery and Underscorea.
-  var $ = window.jQuery;
   var _ = window._;
   var Backbone = window.Backbone;
   var Rec = window.Rec;
