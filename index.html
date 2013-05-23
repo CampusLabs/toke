@@ -129,9 +129,6 @@
               url: 'http://imdbapi.org',
               data: {limit: 10}
             },
-            groupBy: function (result) {
-              return (result.get('rated') || 'UNRATED').replace(/_/g, ' ');
-            },
             Collection: window.Backbone.Collection.extend({
               model: window.Backbone.Model.extend({idAttribute: 'title'})
             })
