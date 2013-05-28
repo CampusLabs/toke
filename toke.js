@@ -32,6 +32,7 @@
 
       this.listenTo(selected, {
         add: function (token) {
+          this.$el.removeClass('js-toke-no-tokens');
           (this.views[token.id] = new TokeToken({
             model: token,
             template: this.tokenTemplate,
@@ -40,12 +41,14 @@
           this.rec.render();
         },
         remove: function (token) {
+          if (!selected.length) this.$el.addClass('js-toke-no-tokens');
           delete this.views[token.id];
           this.rec.render();
         }
       }).listenTo(this.rec = new Rec(options), {
         action: function (ev, result) { selected.add(result); }
       });
+      this.$el.addClass('js-toke-no-tokens');
       this.selected.add(options.selected);
     }
   });
